@@ -27,3 +27,4 @@ Usage
 Tracing implementation
 ----------------------
 npm install jaeger-client -save
+npm install hexer -save
