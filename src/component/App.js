@@ -3,6 +3,8 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 import './App.css';
+//import jaegetClient from 'jaeger-client';
+
 
 class App extends React.Component {
   constructor(props) {
