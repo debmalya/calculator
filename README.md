@@ -23,3 +23,7 @@ Usage
 ---
 
 `npm start`
+
+Tracing implementation
+----------------------
+npm install jaeger-client -save
