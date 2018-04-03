@@ -5,3 +5,5 @@ ThriftUtils._thrift = new _thriftrw.Thrift({
 
 From the line readFileSync got an error ×
 TypeError: _fs2.default.readFileSync is not a function
+
+While using it from react component, 
