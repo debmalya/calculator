@@ -29,3 +29,4 @@ Tracing implementation
 * npm install jaeger-client -save
 * npm install hexer -save
 * npm install thrift -save
+* npm install standard@10.0.3 -g
