@@ -1,6 +1,16 @@
 import operate from './operate';
 import isNumber from './isNumber';
+import zipkinSimple from 'zipkin-simple'
 
+const zipkinTracerSimple = new zipkinSimple({
+             debug: true,
+             host: "localhost",
+             port: "9411",
+             path: "/api/v2/spans",
+             sampling: 1.0,
+})
+
+var zipkinSimpleTraceData
 /**
  * Given a button name and a calculator data object, return an updated
  * calculator data object.
@@ -63,6 +73,11 @@ export default function calculate(obj, buttonName) {
   }
 
   if (buttonName === '=') {
+   zipkinSimpleTraceData= zipkinTracerSimple.getChild(zipkinSimpleTraceData);
+   zipkinSimpleTraceData = zipkinTracerSimple.sendClientSend(zipkinSimpleTraceData, {
+	 service: 'handleClick',
+	 name: "Finally : " + obj.total + " " + obj.operation + " " + obj.next
+    }) 
     if (obj.next && obj.operation) {
       return {
         total: operate(obj.total, obj.next, obj.operation),
