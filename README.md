@@ -24,8 +24,4 @@ Usage
 
 `npm start`
 
-Tracing implementation
-----------------------
-* npm install jaeger-client -save
-* npm install hexer -save
-* npm install thrift -save
+
