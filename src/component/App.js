@@ -3,7 +3,7 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 import './App.css';
-//import jaegetClient from 'jaeger-client';
+
 // Related to zipkinSimple
 import zipkinSimple from 'zipkin-simple'
 
